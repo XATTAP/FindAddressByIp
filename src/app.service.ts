@@ -5,7 +5,6 @@ import { IpResponse } from './interfaces/app.interface';
 @Injectable()
 export class AppService {
   getIp(ip: string) {
-    // 192.168.1.3
 
     const geo = geoip.lookup(ip);
     if (!geo) throw new NotFoundException({ message: 'Ip not found' });
